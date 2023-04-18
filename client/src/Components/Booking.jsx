@@ -79,6 +79,7 @@ const MainForm = styled.div`
 `;
 
 function BookingForm() {
+  const URL = "https://parking-app-79h9.onrender.com";
   const navigate = useNavigate();
   const spotId = useParams(); // get the spotId from the URL params
   console.log(spotId.id)
@@ -102,7 +103,7 @@ function BookingForm() {
     e.preventDefault();
     try {
       await axios.post(
-        `http://localhost:8001/api/bookings/${finalId}`,
+        `${URL}/api/bookings/${finalId}`,
         formData
       );
       // navigate to the dashboard page after successful booking

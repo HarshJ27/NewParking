@@ -79,6 +79,7 @@ const MainForm = styled.div`
 `;
 
 function LoginAuth() {
+  const URL = "https://parking-app-79h9.onrender.com";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [redirectToReferrer, setRedirectToReferrer] = useState(false);
@@ -90,7 +91,7 @@ function LoginAuth() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:8001/api/users/login", {
+      const res = await axios.post(`${URL}/api/users/login`, {
         email,
         password,
       });

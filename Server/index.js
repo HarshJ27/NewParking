@@ -1,6 +1,3 @@
-// tswLgLHUMCFN1uLB
-// mongodb://harshkr2709:<password>@ac-zom5tdc-shard-00-00.c17ahr0.mongodb.net:27017,ac-zom5tdc-shard-00-01.c17ahr0.mongodb.net:27017,ac-zom5tdc-shard-00-02.c17ahr0.mongodb.net:27017/?ssl=true&replicaSet=atlas-5u2kny-shard-0&authSource=admin&retryWrites=true&w=majority
-
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';

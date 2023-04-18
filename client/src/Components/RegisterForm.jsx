@@ -79,6 +79,7 @@ const MainForm = styled.div`
 `;
 
 function RegisterAuth() {
+  const URL = "https://parking-app-79h9.onrender.com";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -91,7 +92,7 @@ function RegisterAuth() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:8001/api/users/register", {
+      const res = await axios.post(`${URL}/api/users/register`, {
         name,
         email,
         password,

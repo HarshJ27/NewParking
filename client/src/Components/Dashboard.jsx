@@ -4,6 +4,7 @@ import axios from "axios";
 import "../App.css"
 
 function Dashboard() {
+  const URL = "https://parking-app-79h9.onrender.com";
   const [parkingSpots, setParkingSpots] = useState([]);
   // const [showBookingForm, setShowBookingForm] = useState(false);
   // const [selectedSpotId, setSelectedSpotId] = useState(null);
@@ -14,7 +15,7 @@ function Dashboard() {
   useEffect(() => {
     async function fetchParkingSpots() {
       try {
-        const res = await axios.get("http://localhost:8001/api/parking-spots");
+        const res = await axios.get(`${URL}/api/parking-spots`);
         setParkingSpots(res.data);
       } catch (err) {
         console.error(err);
@@ -27,7 +28,7 @@ function Dashboard() {
     try {
       // check if the spot is available
       const res = await axios.get(
-        `http://localhost:8001/api/parking-spots/${spotId}`
+        `${URL}/api/parking-spots/${spotId}`
       );
       const { isAvailable } = res.data;
       if (!isAvailable) {
