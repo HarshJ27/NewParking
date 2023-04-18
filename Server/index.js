@@ -35,7 +35,7 @@ app.use('/api/parking-spots', ParkingSpotRoutes);
 app.use('/api/bookings', BookingRoutes);
 
 // Start the server
-app.listen(8001, () => {
+app.listen(process.env.PORT || 8001, () => {
     connect();
     console.log("Connected to Server");
 });
